@@ -1,57 +1,61 @@
 // JavaScript functions wrapped in Visual Basic 6 style syntax
 // Started by Alacritous in February 2012
 // Why? Why not?
+// All the functions behave like their vb counterparts. 
+// All the functions can be accessed through the namespace vb
+// like vb.chr(65);
+// will return an "A"
+//
 
-// Constants
-var vbcrlf = chr(10) + chr(13);
-
-
-
+var vb = vb || {}; //define vb namespace here
+//
 //string functions
-function trim(stringToTrim) {
+//
+vb.trim = function(stringToTrim) {
     return stringToTrim.replace(/^\s+|\s+$/g,"");
 }
-function ltrim(stringToTrim) {
+vb.ltrim = function(stringToTrim) {
     return stringToTrim.replace(/^\s+/,"");
 }
-function rtrim(stringToTrim) {
+vb.rtrim = function(stringToTrim) {
     return stringToTrim.replace(/\s+$/,"");
 }
-function strreverse(string){
+vb.strreverse = function(string){
     return string.split("").reverse().join("");
 }
-function mid$(string, start, count) {
+vb.mid$ = function(string, start, count) {
     return string.substring(start, start + count);
 }
-function instr(string, substring) {
+vb.instr = function(string, substring) {
     return string.indexOf(substring)
 }
-function instrrev(string, substring) {
+vb.instrrev = function(string, substring) {
     return string.lastIndexOf(substring);
 }
-function chr(asciinum) {
+vb.chr = function(asciinum) {
     return String.fromCharCode(asciinum);
 }
-function asc(string) {
+vb.asc = function(string) {
     return string.charCodeAt(0);
 }
-function lcase(string){
+vb.lcase = function(string){
     return string.toLowerCase();
 }
-function ucase(string){
+vb.ucase = function(string){
     return string.toUpperCase();
 }
-function replace(string,find,newtext){
+vb.replace = function(string,find,newtext){
     newstring = "/" + find + "/gi";
     newstring.replace(/;/gi,"");
   return string.replace( eval(newstring),newtext);
 }
-
+//
 //number functions
-function abs(number){
+//
+vb.abs = function(number){
     return Math.abs(number);
 }
-function hex(d, padding) { //returns hexadecimal value from integer input. with optional 0 padding
+vb.hex = function(d, padding) { //returns hexadecimal value from integer input. with optional 0 padding
     var hex = Number(d).toString(16);
     padding = typeof (padding) === "undefined" || padding === null ? padding = 2 : padding;
 
@@ -60,29 +64,31 @@ function hex(d, padding) { //returns hexadecimal value from integer input. with 
     }
     return hex.toUpperCase();
 }
-function dec(hex){  //returns decimal value from hexadecimal input
+vb.dec = function(hex){  //returns decimal value from hexadecimal input
    return parseInt(hex,16);
 }
-function val(string) {//returns floating point value with decimals.
+vb.val = function(string) {//returns floating point value with decimals.
     return parseFloat(string);
 }
-function intval(string) { //returns integer value with no decimals. 
+vb.intval = function(string) { //returns integer value with no decimals. 
     return parseInt(string,10);
 }
+//
 //array functions
-function split(content,delimiter){ //returns array from content divided by delimeter. 
+//
+vb.split = function(content,delimiter){ //returns array from content divided by delimeter. 
     return content.split(delimiter);
 }
-
-
-
-
+//
 //date functions
-function date(){
+//
+vb.date = function(){
     var d = new Date(Date.now());
-     return val(d.getMonth())+1 + "/" + d.getDate() + "/" + d.getFullYear()
+     return vb.val(d.getMonth())+1 + "/" + d.getDate() + "/" + d.getFullYear()
 }
 //misc functions
-function qq(string) {//returns string wrapped in double quotes " at both ends. 
+vb.qq = function(string) {//returns string wrapped in double quotes " at both ends. 
     return String.fromCharCode(34) + string + String.fromCharCode(34);
 }
+// Constants
+var vbcrlf = vb.chr(10) + vb.chr(13);
