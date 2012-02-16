@@ -79,8 +79,8 @@ function split(content,delimiter){ //returns array from content divided by delim
 
 //date functions
 function date(){
-    now = new Date();
-    return now;
+    var d = new Date(Date.now());
+     return val(d.getMonth())+1 + "/" + d.getDate() + "/" + d.getFullYear()
 }
 //misc functions
 function qq(string) {//returns string wrapped in double quotes " at both ends. 
