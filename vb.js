@@ -2,6 +2,9 @@
 // Started by Alacritous in February 2012
 // Why? Why not?
 
+// Constants
+var vbcrlf = chr(10) + chr(13);
+
 
 //string functions
 function trim(stringToTrim) {
