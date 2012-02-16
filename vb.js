@@ -1,4 +1,4 @@
-//Visual Basic functions Wrapped in Javascript
+// JavaScript functions wrapped in Visual Basic 6 style syntax
 // Started by Alacritous in February 2012
 // Why? Why not?
 
