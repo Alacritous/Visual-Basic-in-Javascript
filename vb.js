@@ -1,3 +1,8 @@
+//Visual Basic functions Wrapped in Javascript
+// Started by Alacritous in February 2012
+// Why? Why not?
+
+
 //string functions
 function trim(stringToTrim) {
     return stringToTrim.replace(/^\s+|\s+$/g,"");
