@@ -65,19 +65,16 @@ function intval(string) { //returns integer value with no decimals.
 function split(content,delimiter){ //returns array from content divided by delimeter. 
     return content.split(delimiter);
 }
-//date functions
 
+
+
+
+//date functions
 function date(){
     var now = new Date();
     return now();
 }
-
-
-
-
-
 //misc functions
-
-function qq(string) {
+function qq(string) {//returns string wrapped in double quotes " at both ends. 
     return String.fromCharCode(34) + string + String.fromCharCode(34);
 }
