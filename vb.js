@@ -43,7 +43,7 @@ function ucase(string){
 function abs(number){
     return Math.abs(number);
 }
-function hex(d, padding) {
+function hex(d, padding) { //returns hexadecimal value from integer input. with optional 0 padding
     var hex = Number(d).toString(16);
     padding = typeof (padding) === "undefined" || padding === null ? padding = 2 : padding;
 
@@ -52,7 +52,7 @@ function hex(d, padding) {
     }
     return hex.toUpperCase();
 }
-function dec(hex){
+function dec(hex){  //returns decimal value from hexadecimal input
    return parseInt(hex,16);
 }
 function val(string) {//returns floating point value with decimals.
