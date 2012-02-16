@@ -6,6 +6,7 @@
 var vbcrlf = chr(10) + chr(13);
 
 
+
 //string functions
 function trim(stringToTrim) {
     return stringToTrim.replace(/^\s+|\s+$/g,"");
@@ -40,7 +41,11 @@ function lcase(string){
 function ucase(string){
     return string.toUpperCase();
 }
-
+function replace(string,find,newtext){
+    newstring = "/" + find + "/gi";
+    newstring.replace(/;/gi,"");
+  return string.replace( eval(newstring),newtext);
+}
 
 //number functions
 function abs(number){
@@ -74,8 +79,8 @@ function split(content,delimiter){ //returns array from content divided by delim
 
 //date functions
 function date(){
-    var now = new Date();
-    return now();
+    now = new Date();
+    return now;
 }
 //misc functions
 function qq(string) {//returns string wrapped in double quotes " at both ends. 
