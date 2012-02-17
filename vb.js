@@ -5,7 +5,8 @@
 // All the functions can be accessed through the namespace vb
 // like vb.chr(65);
 // will return an "A"
-//
+// this file will occasionally be passed through  http://www.jslint.com/
+// to make sure it's okee dokee. 
 
 var vb = vb || {}; //define vb namespace here
 //
