@@ -95,4 +95,4 @@ vb.qq = function (string) {//returns string wrapped in double quotes " at both e
     return String.fromCharCode(34) + string + String.fromCharCode(34);
 };
 // Constants
-var vbcrlf = vb.chr(10) + vb.chr(13);
+var vbcrlf =  vb.chr(13) + vb.chr(10);
