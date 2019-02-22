@@ -76,6 +76,10 @@ vb.intval = function (string) { //returns integer value with no decimals.
 vb.int = function(value){
 return parseInt(value);    
 }
+vb.sqr = function (value) {
+    return Math.sqrt(value);
+}
+
 
 //
 //array functions
@@ -85,6 +89,8 @@ vb.split = function (content, delimiter) { //returns array from content divided 
 };
 //
 //date functions
+//
+// A lot of the Javascript date functions are pretty good.  Don't be afraid to use those
 //
 vb.date = function () {
     var d = new Date(Date.now());
